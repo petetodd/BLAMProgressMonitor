@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D042AFF11D11C3620095D480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042AFF01D11C3620095D480 /* AppDelegate.swift */; };
+		D042AFF31D11C3620095D480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042AFF21D11C3620095D480 /* ViewController.swift */; };
+		D042AFF61D11C3620095D480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D042AFF41D11C3620095D480 /* Main.storyboard */; };
+		D042AFF91D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D042AFF71D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld */; };
+		D042AFFB1D11C3620095D480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D042AFFA1D11C3620095D480 /* Assets.xcassets */; };
+		D042AFFE1D11C3620095D480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D042AFFC1D11C3620095D480 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D042AFED1D11C3620095D480 /* BLAMProgressMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLAMProgressMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D042AFF01D11C3620095D480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D042AFF21D11C3620095D480 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D042AFF51D11C3620095D480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D042AFF81D11C3620095D480 /* BLAMProgressMonitor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BLAMProgressMonitor.xcdatamodel; sourceTree = "<group>"; };
+		D042AFFA1D11C3620095D480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D042AFFD1D11C3620095D480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D042AFFF1D11C3620095D480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D042AFEA1D11C3620095D480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D042AFE41D11C3620095D480 = {
+			isa = PBXGroup;
+			children = (
+				D042AFEF1D11C3620095D480 /* BLAMProgressMonitor */,
+				D042AFEE1D11C3620095D480 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D042AFEE1D11C3620095D480 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D042AFED1D11C3620095D480 /* BLAMProgressMonitor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D042AFEF1D11C3620095D480 /* BLAMProgressMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				D042AFF01D11C3620095D480 /* AppDelegate.swift */,
+				D042AFF21D11C3620095D480 /* ViewController.swift */,
+				D042AFF41D11C3620095D480 /* Main.storyboard */,
+				D042AFFA1D11C3620095D480 /* Assets.xcassets */,
+				D042AFFC1D11C3620095D480 /* LaunchScreen.storyboard */,
+				D042AFFF1D11C3620095D480 /* Info.plist */,
+				D042AFF71D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld */,
+			);
+			path = BLAMProgressMonitor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D042AFEC1D11C3620095D480 /* BLAMProgressMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D042B0021D11C3620095D480 /* Build configuration list for PBXNativeTarget "BLAMProgressMonitor" */;
+			buildPhases = (
+				D042AFE91D11C3620095D480 /* Sources */,
+				D042AFEA1D11C3620095D480 /* Frameworks */,
+				D042AFEB1D11C3620095D480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLAMProgressMonitor;
+			productName = BLAMProgressMonitor;
+			productReference = D042AFED1D11C3620095D480 /* BLAMProgressMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D042AFE51D11C3620095D480 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Bright Green Star";
+				TargetAttributes = {
+					D042AFEC1D11C3620095D480 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = D042AFE81D11C3620095D480 /* Build configuration list for PBXProject "BLAMProgressMonitor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D042AFE41D11C3620095D480;
+			productRefGroup = D042AFEE1D11C3620095D480 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D042AFEC1D11C3620095D480 /* BLAMProgressMonitor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D042AFEB1D11C3620095D480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D042AFFE1D11C3620095D480 /* LaunchScreen.storyboard in Resources */,
+				D042AFFB1D11C3620095D480 /* Assets.xcassets in Resources */,
+				D042AFF61D11C3620095D480 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D042AFE91D11C3620095D480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D042AFF31D11C3620095D480 /* ViewController.swift in Sources */,
+				D042AFF91D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld in Sources */,
+				D042AFF11D11C3620095D480 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D042AFF41D11C3620095D480 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D042AFF51D11C3620095D480 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D042AFFC1D11C3620095D480 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D042AFFD1D11C3620095D480 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D042B0001D11C3620095D480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D042B0011D11C3620095D480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D042B0031D11C3620095D480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BLAMProgressMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightgreenstar.BLAMProgressMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D042B0041D11C3620095D480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BLAMProgressMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightgreenstar.BLAMProgressMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D042AFE81D11C3620095D480 /* Build configuration list for PBXProject "BLAMProgressMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D042B0001D11C3620095D480 /* Debug */,
+				D042B0011D11C3620095D480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D042B0021D11C3620095D480 /* Build configuration list for PBXNativeTarget "BLAMProgressMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D042B0031D11C3620095D480 /* Debug */,
+				D042B0041D11C3620095D480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D042AFF71D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D042AFF81D11C3620095D480 /* BLAMProgressMonitor.xcdatamodel */,
+			);
+			currentVersion = D042AFF81D11C3620095D480 /* BLAMProgressMonitor.xcdatamodel */;
+			path = BLAMProgressMonitor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D042AFE51D11C3620095D480 /* Project object */;
+}
