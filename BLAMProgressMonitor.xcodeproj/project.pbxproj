@@ -13,6 +13,11 @@
 		D042AFF91D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D042AFF71D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld */; };
 		D042AFFB1D11C3620095D480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D042AFFA1D11C3620095D480 /* Assets.xcassets */; };
 		D042AFFE1D11C3620095D480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D042AFFC1D11C3620095D480 /* LaunchScreen.storyboard */; };
+		D042B0071D11C3A00095D480 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0061D11C3A00095D480 /* UIApplicationExtensions.swift */; };
+		D042B00C1D11C41E0095D480 /* BLAMProgressMonitorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B00A1D11C41E0095D480 /* BLAMProgressMonitorVC.swift */; };
+		D042B00D1D11C41E0095D480 /* BLAMProgressMonitorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D042B00B1D11C41E0095D480 /* BLAMProgressMonitorVC.xib */; };
+		D042B0101D11C4B70095D480 /* BGSTransitionCenteredModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B00F1D11C4B70095D480 /* BGSTransitionCenteredModal.swift */; };
+		D042B0121D11C5410095D480 /* BGSTransitionCenteredAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0111D11C5410095D480 /* BGSTransitionCenteredAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		D042AFFA1D11C3620095D480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D042AFFD1D11C3620095D480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D042AFFF1D11C3620095D480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D042B0061D11C3A00095D480 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplicationExtensions.swift; path = Extensions/UIApplicationExtensions.swift; sourceTree = "<group>"; };
+		D042B00A1D11C41E0095D480 /* BLAMProgressMonitorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BLAMProgressMonitorVC.swift; path = GUI/ProgressMonitor/BLAMProgressMonitorVC.swift; sourceTree = "<group>"; };
+		D042B00B1D11C41E0095D480 /* BLAMProgressMonitorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BLAMProgressMonitorVC.xib; path = GUI/ProgressMonitor/BLAMProgressMonitorVC.xib; sourceTree = "<group>"; };
+		D042B00F1D11C4B70095D480 /* BGSTransitionCenteredModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGSTransitionCenteredModal.swift; sourceTree = "<group>"; };
+		D042B0111D11C5410095D480 /* BGSTransitionCenteredAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGSTransitionCenteredAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,9 @@
 		D042AFEF1D11C3620095D480 /* BLAMProgressMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				D042B00E1D11C4910095D480 /* TransitionManagers */,
+				D042B0081D11C3E10095D480 /* GUI */,
+				D042B0051D11C36A0095D480 /* Extensions */,
 				D042AFF01D11C3620095D480 /* AppDelegate.swift */,
 				D042AFF21D11C3620095D480 /* ViewController.swift */,
 				D042AFF41D11C3620095D480 /* Main.storyboard */,
@@ -65,6 +78,40 @@
 				D042AFF71D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld */,
 			);
 			path = BLAMProgressMonitor;
+			sourceTree = "<group>";
+		};
+		D042B0051D11C36A0095D480 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D042B0061D11C3A00095D480 /* UIApplicationExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D042B0081D11C3E10095D480 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				D042B0091D11C3EB0095D480 /* ProgressMonitor */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		D042B0091D11C3EB0095D480 /* ProgressMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				D042B00A1D11C41E0095D480 /* BLAMProgressMonitorVC.swift */,
+				D042B00B1D11C41E0095D480 /* BLAMProgressMonitorVC.xib */,
+			);
+			name = ProgressMonitor;
+			sourceTree = "<group>";
+		};
+		D042B00E1D11C4910095D480 /* TransitionManagers */ = {
+			isa = PBXGroup;
+			children = (
+				D042B0111D11C5410095D480 /* BGSTransitionCenteredAnimator.swift */,
+				D042B00F1D11C4B70095D480 /* BGSTransitionCenteredModal.swift */,
+			);
+			name = TransitionManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D042B00D1D11C41E0095D480 /* BLAMProgressMonitorVC.xib in Resources */,
 				D042AFFE1D11C3620095D480 /* LaunchScreen.storyboard in Resources */,
 				D042AFFB1D11C3620095D480 /* Assets.xcassets in Resources */,
 				D042AFF61D11C3620095D480 /* Main.storyboard in Resources */,
@@ -139,7 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D042AFF31D11C3620095D480 /* ViewController.swift in Sources */,
+				D042B00C1D11C41E0095D480 /* BLAMProgressMonitorVC.swift in Sources */,
 				D042AFF91D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld in Sources */,
+				D042B0071D11C3A00095D480 /* UIApplicationExtensions.swift in Sources */,
+				D042B0121D11C5410095D480 /* BGSTransitionCenteredAnimator.swift in Sources */,
+				D042B0101D11C4B70095D480 /* BGSTransitionCenteredModal.swift in Sources */,
 				D042AFF11D11C3620095D480 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func displayButAction(sender: AnyObject) {
+        displaySync()
+    
+    }
+    
+    private func displaySync(){
+        if let topVC = UIApplication.topViewController(){
+            let displayVC = BLAMProgressMonitorVC()
+            let transitionManager = BGSTransitionCenteredModal()
+            displayVC.transitioningDelegate = transitionManager
+            topVC.presentViewController(displayVC, animated: true, completion: nil)
+           
+        }
+    }
 
 }
 
