@@ -24,8 +24,16 @@ class BGSUICircleView: UIView {
     var indicatorArcColor : UIColor!
     var fillColor : UIColor!
     var fillAlpha : Float!
-    var showPercentage = false
+   
     var lblText = ""
+    // Percent Display
+    var showPercentage = false
+    var fontNamePercent = "Arial"
+    var fontsizePercent : Float = 45
+    // Label text
+    var fontNameLabel = "Arial"
+    var fontsizeLabel : Float = 25
+
 
     /*
     // Only override drawRect: if you perform custom drawing.
@@ -126,8 +134,8 @@ class BGSUICircleView: UIView {
             CGContextDrawPath(ctx, .Stroke);
         }
     // Draw any label in the bottom quarter of the view
-    let yPt = (rect.height / 4) * 3
-    let rectText = CGRect(x: 0, y: yPt, width: rect.width, height: (rect.width / 4))
+    let yPt = (rect.height / 2)
+    let rectText = CGRect(x: 0, y: yPt, width: rect.width, height: (rect.width / 2))
     attributedTextDraw(rectText)
     
     if showPercentage == true{
@@ -142,19 +150,24 @@ class BGSUICircleView: UIView {
     
     // Add text if required
     private func attributedTextDraw(rect: CGRect) {
-        
+        let font = UIFont(name: fontNameLabel, size: CGFloat(fontsizeLabel))
+
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .Center
         
-        let attributes = [NSParagraphStyleAttributeName:paragraphStyle]
-        let size: CGSize = NSString(string: lblText).sizeWithAttributes(attributes)
+        
+        var multipleAttributes = [String : NSObject]()
+        multipleAttributes[NSParagraphStyleAttributeName] = paragraphStyle
+        multipleAttributes[NSFontAttributeName] = font
+        
+        let size: CGSize = NSString(string: lblText).sizeWithAttributes(multipleAttributes)
         
         let r = CGRectMake(rect.origin.x, rect.origin.y + (rect.size.height - size.height)/2.0,
                            rect.size.width, size.height)
         
         let attribString = NSAttributedString(
             string: lblText,
-            attributes: attributes
+            attributes: multipleAttributes
         )
 
         attribString.drawInRect(r)
@@ -163,21 +176,28 @@ class BGSUICircleView: UIView {
     
     private func attributedTextPercentageCompleteDraw(rect: CGRect) {
         
+        let font = UIFont(name: fontNamePercent, size: CGFloat(fontsizePercent))
+     
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .Center
         
-        let attributes = [NSParagraphStyleAttributeName:paragraphStyle]
+        var multipleAttributes = [String : NSObject]()
+        multipleAttributes[NSParagraphStyleAttributeName] = paragraphStyle
+        multipleAttributes[NSFontAttributeName] = font
+
+//        var attributes = [NSParagraphStyleAttributeName:paragraphStyle]
+  
         let percentage = percentageComplete.floatValue * 100
         let strPercent = String(format: "%.2f",percentage)
 
-        let size: CGSize = NSString(string: strPercent).sizeWithAttributes(attributes)
+        let size: CGSize = NSString(string: strPercent).sizeWithAttributes(multipleAttributes)
         let r = CGRectMake(rect.origin.x, rect.origin.y + (rect.size.height - size.height)/2.0,
                            rect.size.width, size.height)
         
         
         let attribString = NSAttributedString(
             string: strPercent,
-            attributes: attributes
+            attributes: multipleAttributes
         )
         
         attribString.drawInRect(r)
