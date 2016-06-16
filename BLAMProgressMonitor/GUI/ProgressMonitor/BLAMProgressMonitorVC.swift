@@ -10,10 +10,22 @@ import UIKit
 
 class BLAMProgressMonitorVC: UIViewController {
 
+    @IBOutlet weak var circleView: BGSUICircleView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        circleView.percentageComplete = NSNumber(float: 0.986) // Scale 0 - 1
+        circleView.indicatorArcColor = UIColor.blueColor()
+        circleView.fillColor = UIColor.lightGrayColor()
+        circleView.lineWidth = 5
+        circleView.fillAlpha = 0.3
+        circleView.showPercentage = true
+        circleView.lblText = "Migration"
+        circleView.showPercentage = true
+   //     [self.circleView setPercentageComplete:[NSNumber numberWithFloat:0.356]];
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +34,5 @@ class BLAMProgressMonitorVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

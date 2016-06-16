@@ -3,10 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BLAMProgressMonitorVC" customModule="BLAMProgressMonitor" customModuleProvider="target">
             <connections>
+                <outlet property="circleView" destination="5bK-kx-A9V" id="lcH-D3-TpU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +16,30 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tdL-f5-7ZI">
+                    <rect key="frame" x="8" y="256" width="584" height="336"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bK-kx-A9V" customClass="BGSUICircleView" customModule="BLAMProgressMonitor" customModuleProvider="target">
+                    <rect key="frame" x="180" y="8" width="240" height="240"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="cfr-SC-nXI"/>
+                        <constraint firstAttribute="width" constant="240" id="zcy-Fg-HkM"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="0.99607843159999998" green="0.83137255909999996" blue="0.03529411927" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="5bK-kx-A9V" firstAttribute="centerX" secondItem="tdL-f5-7ZI" secondAttribute="centerX" id="MNV-11-o9R"/>
+                <constraint firstItem="tdL-f5-7ZI" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="NGB-XN-iXU"/>
+                <constraint firstItem="5bK-kx-A9V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZNc-Om-Z2x"/>
+                <constraint firstItem="tdL-f5-7ZI" firstAttribute="top" secondItem="5bK-kx-A9V" secondAttribute="bottom" constant="8" id="ZvH-CE-vMG"/>
+                <constraint firstItem="5bK-kx-A9V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="jjk-a1-EPI"/>
+                <constraint firstItem="tdL-f5-7ZI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="yxE-3x-7YV"/>
+            </constraints>
+            <point key="canvasLocation" x="371" y="285"/>
         </view>
     </objects>
 </document>
