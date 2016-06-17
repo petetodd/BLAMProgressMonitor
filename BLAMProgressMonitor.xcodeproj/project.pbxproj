@@ -19,6 +19,8 @@
 		D042B0101D11C4B70095D480 /* BGSTransitionCenteredModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B00F1D11C4B70095D480 /* BGSTransitionCenteredModal.swift */; };
 		D042B0121D11C5410095D480 /* BGSTransitionCenteredAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0111D11C5410095D480 /* BGSTransitionCenteredAnimator.swift */; };
 		D042B0151D12AA020095D480 /* BGSUICircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0141D12AA020095D480 /* BGSUICircleView.swift */; };
+		D042B0191D147D5D0095D480 /* BGSPMTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0171D147D5D0095D480 /* BGSPMTableView.swift */; };
+		D042B01A1D147D5D0095D480 /* BGSPMTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D042B0181D147D5D0095D480 /* BGSPMTableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		D042B00F1D11C4B70095D480 /* BGSTransitionCenteredModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGSTransitionCenteredModal.swift; sourceTree = "<group>"; };
 		D042B0111D11C5410095D480 /* BGSTransitionCenteredAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGSTransitionCenteredAnimator.swift; sourceTree = "<group>"; };
 		D042B0141D12AA020095D480 /* BGSUICircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BGSUICircleView.swift; path = GUI/CircleView/BGSUICircleView.swift; sourceTree = "<group>"; };
+		D042B0171D147D5D0095D480 /* BGSPMTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BGSPMTableView.swift; path = GUI/TableView/BGSPMTableView.swift; sourceTree = "<group>"; };
+		D042B0181D147D5D0095D480 /* BGSPMTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BGSPMTableView.xib; path = GUI/TableView/BGSPMTableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		D042B0081D11C3E10095D480 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				D042B0161D147D030095D480 /* TableView */,
 				D042B0131D12A9A10095D480 /* CircleView */,
 				D042B0091D11C3EB0095D480 /* ProgressMonitor */,
 			);
@@ -123,6 +128,15 @@
 				D042B0141D12AA020095D480 /* BGSUICircleView.swift */,
 			);
 			name = CircleView;
+			sourceTree = "<group>";
+		};
+		D042B0161D147D030095D480 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D042B0171D147D5D0095D480 /* BGSPMTableView.swift */,
+				D042B0181D147D5D0095D480 /* BGSPMTableView.xib */,
+			);
+			name = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +200,7 @@
 				D042B00D1D11C41E0095D480 /* BLAMProgressMonitorVC.xib in Resources */,
 				D042AFFE1D11C3620095D480 /* LaunchScreen.storyboard in Resources */,
 				D042AFFB1D11C3620095D480 /* Assets.xcassets in Resources */,
+				D042B01A1D147D5D0095D480 /* BGSPMTableView.xib in Resources */,
 				D042AFF61D11C3620095D480 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +217,7 @@
 				D042AFF91D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld in Sources */,
 				D042B0071D11C3A00095D480 /* UIApplicationExtensions.swift in Sources */,
 				D042B0121D11C5410095D480 /* BGSTransitionCenteredAnimator.swift in Sources */,
+				D042B0191D147D5D0095D480 /* BGSPMTableView.swift in Sources */,
 				D042B0101D11C4B70095D480 /* BGSTransitionCenteredModal.swift in Sources */,
 				D042AFF11D11C3620095D480 /* AppDelegate.swift in Sources */,
 				D042B0151D12AA020095D480 /* BGSUICircleView.swift in Sources */,
