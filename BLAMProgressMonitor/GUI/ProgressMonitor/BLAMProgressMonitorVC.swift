@@ -21,6 +21,8 @@ class BLAMProgressMonitorVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configGestures()
+        // Create the job
+        createJob()
 
         // Do any additional setup after loading the view.
         
@@ -72,6 +74,27 @@ class BLAMProgressMonitorVC: UIViewController {
                 circleView.setNeedsDisplay()
             }
         }
+    }
+    
+    @IBAction func butCancelAction(sender: AnyObject) {
+        dismissView()
+    }
+    // MARK: - Create Job in Core Data
+    // Used to log job enable reporting on progress of previous jobs
+    func createJob(){
+        var dict = [String: AnyObject] ()
+        dict["jobDesc"] = "Test job"
+        dict["jobID"] = uniqueStringID()
+        dict["jobStatus"] = "Started"
+        dict["message"] = "Just started a test job"
+        dict["percentageComplete"] = NSNumber(int: 0)
+        BGSPMCoreData.sharedInstance.createPMJob(dict)
+        BGSPMCoreData.sharedInstance.saveContext()
+    }
+    
+    func uniqueStringID()-> String{
+        let strUnique = NSProcessInfo().globallyUniqueString
+        return strUnique
     }
     
     // MARK: - Deinit (Notification)
