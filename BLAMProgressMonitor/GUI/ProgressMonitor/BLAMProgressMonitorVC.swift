@@ -16,17 +16,20 @@ class BLAMProgressMonitorVC: UIViewController {
     
     
     @IBOutlet weak var circleView: BGSUICircleView!
+    @IBOutlet weak var tableView: UITableView!
     
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+   //     let dataSourceTV = tableView.dataSource as! BGSPMTableViewDataSource
+     //   tableView.dataSource = dataSourceTV
         configGestures()
         // Create the job
         createJob()
-
-        // Do any additional setup after loading the view.
+    //    dataSourceTV.selectedJob = selectedJob
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(updateProgress), name: notificationProgress, object: nil)
         
@@ -53,6 +56,9 @@ class BLAMProgressMonitorVC: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    override func viewDidLayoutSubviews() {
+ //       tableView.reloadData()
+    }
     
 
     func updateProgress(notification: NSNotification){
@@ -81,6 +87,10 @@ class BLAMProgressMonitorVC: UIViewController {
     @IBAction func butCancelAction(sender: AnyObject) {
         dismissView()
     }
+    
+    
+    
+    
     // MARK: - Create Job in Core Data
     // Used to log job enable reporting on progress of previous jobs
     func createJob(){
@@ -120,6 +130,11 @@ class BLAMProgressMonitorVC: UIViewController {
         let jobStep = BGSPMCoreData.sharedInstance.createPMJobStep(dict) as! JobStep
         jobStep.job = selectedJob
         BGSPMCoreData.sharedInstance.saveContext()
+        self.tableView.reloadData()
+        
+        print("table view sections : \(tableView.numberOfSections)")
+
+        
 
     }
 
@@ -134,6 +149,34 @@ class BLAMProgressMonitorVC: UIViewController {
     {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
+
+    
+    // MARK: - Table view data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return   1
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if selectedJob != nil{
+            return (selectedJob.steps?.count)!
+        }else {
+            return 0
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = UITableViewCell()
+        let jobStep = selectedJob.steps?.allObjects[indexPath.row] as! JobStep
+        cell.textLabel?.text = jobStep.message
+        
+        
+        
+        return cell
+    }
+    
 
 
 }

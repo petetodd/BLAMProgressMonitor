@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BLAMProgressMonitorVC" customModule="BLAMProgressMonitor" customModuleProvider="target">
             <connections>
                 <outlet property="circleView" destination="5bK-kx-A9V" id="lcH-D3-TpU"/>
+                <outlet property="tableView" destination="tdL-f5-7ZI" id="OZ9-iD-hyY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,9 +18,14 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tdL-f5-7ZI">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tdL-f5-7ZI">
                     <rect key="frame" x="8" y="256" width="584" height="336"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yfT-K8-Zyu"/>
+                        <outlet property="delegate" destination="-1" id="4GU-lY-KVg"/>
+                    </connections>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bK-kx-A9V" customClass="BGSUICircleView" customModule="BLAMProgressMonitor" customModuleProvider="target">
                     <rect key="frame" x="180" y="8" width="240" height="240"/>
@@ -54,5 +60,6 @@
             </constraints>
             <point key="canvasLocation" x="371" y="285"/>
         </view>
+        <customObject id="XWw-kx-MrQ" customClass="BGSPMTableViewDataSource" customModule="BLAMProgressMonitor" customModuleProvider="target"/>
     </objects>
 </document>

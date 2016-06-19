@@ -19,9 +19,6 @@
 		D042B0101D11C4B70095D480 /* BGSTransitionCenteredModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B00F1D11C4B70095D480 /* BGSTransitionCenteredModal.swift */; };
 		D042B0121D11C5410095D480 /* BGSTransitionCenteredAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0111D11C5410095D480 /* BGSTransitionCenteredAnimator.swift */; };
 		D042B0151D12AA020095D480 /* BGSUICircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0141D12AA020095D480 /* BGSUICircleView.swift */; };
-		D042B0191D147D5D0095D480 /* BGSPMTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0171D147D5D0095D480 /* BGSPMTableView.swift */; };
-		D042B01A1D147D5D0095D480 /* BGSPMTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D042B0181D147D5D0095D480 /* BGSPMTableView.xib */; };
-		D042B01E1D1534730095D480 /* BGSPMTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B01D1D1534730095D480 /* BGSPMTableViewDataSource.swift */; };
 		D042B0211D1536D40095D480 /* BGSPMCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0201D1536D40095D480 /* BGSPMCoreData.swift */; };
 		D042B0241D15383D0095D480 /* BGSPMDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D042B0221D15383D0095D480 /* BGSPMDataModel.xcdatamodeld */; };
 		D042B02C1D153AF60095D480 /* BLAMProgressMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B02B1D153AF60095D480 /* BLAMProgressMonitorTests.swift */; };
@@ -58,9 +55,6 @@
 		D042B00F1D11C4B70095D480 /* BGSTransitionCenteredModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGSTransitionCenteredModal.swift; sourceTree = "<group>"; };
 		D042B0111D11C5410095D480 /* BGSTransitionCenteredAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGSTransitionCenteredAnimator.swift; sourceTree = "<group>"; };
 		D042B0141D12AA020095D480 /* BGSUICircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BGSUICircleView.swift; path = GUI/CircleView/BGSUICircleView.swift; sourceTree = "<group>"; };
-		D042B0171D147D5D0095D480 /* BGSPMTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BGSPMTableView.swift; path = GUI/TableView/BGSPMTableView.swift; sourceTree = "<group>"; };
-		D042B0181D147D5D0095D480 /* BGSPMTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BGSPMTableView.xib; path = GUI/TableView/BGSPMTableView.xib; sourceTree = "<group>"; };
-		D042B01D1D1534730095D480 /* BGSPMTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BGSPMTableViewDataSource.swift; path = GUI/TableView/BGSPMTableViewDataSource.swift; sourceTree = "<group>"; };
 		D042B0201D1536D40095D480 /* BGSPMCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BGSPMCoreData.swift; path = CoreData/BGSPMCoreData.swift; sourceTree = "<group>"; };
 		D042B0231D15383D0095D480 /* BGSPMDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BGSPMDataModel.xcdatamodel; sourceTree = "<group>"; };
 		D042B0291D153AF60095D480 /* BLAMProgressMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLAMProgressMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,7 +132,6 @@
 		D042B0081D11C3E10095D480 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
-				D042B0161D147D030095D480 /* TableView */,
 				D042B0131D12A9A10095D480 /* CircleView */,
 				D042B0091D11C3EB0095D480 /* ProgressMonitor */,
 			);
@@ -169,16 +162,6 @@
 				D042B0141D12AA020095D480 /* BGSUICircleView.swift */,
 			);
 			name = CircleView;
-			sourceTree = "<group>";
-		};
-		D042B0161D147D030095D480 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				D042B0171D147D5D0095D480 /* BGSPMTableView.swift */,
-				D042B0181D147D5D0095D480 /* BGSPMTableView.xib */,
-				D042B01D1D1534730095D480 /* BGSPMTableViewDataSource.swift */,
-			);
-			name = TableView;
 			sourceTree = "<group>";
 		};
 		D042B01F1D15368D0095D480 /* CoreData */ = {
@@ -288,7 +271,6 @@
 				D042B00D1D11C41E0095D480 /* BLAMProgressMonitorVC.xib in Resources */,
 				D042AFFE1D11C3620095D480 /* LaunchScreen.storyboard in Resources */,
 				D042AFFB1D11C3620095D480 /* Assets.xcassets in Resources */,
-				D042B01A1D147D5D0095D480 /* BGSPMTableView.xib in Resources */,
 				D042AFF61D11C3620095D480 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,10 +294,8 @@
 				D042B03C1D16FC4D0095D480 /* JobStep+CoreDataProperties.swift in Sources */,
 				D042AFF91D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld in Sources */,
 				D042B0071D11C3A00095D480 /* UIApplicationExtensions.swift in Sources */,
-				D042B01E1D1534730095D480 /* BGSPMTableViewDataSource.swift in Sources */,
 				D042B03B1D16FC4D0095D480 /* Job.swift in Sources */,
 				D042B0121D11C5410095D480 /* BGSTransitionCenteredAnimator.swift in Sources */,
-				D042B0191D147D5D0095D480 /* BGSPMTableView.swift in Sources */,
 				D042B0101D11C4B70095D480 /* BGSTransitionCenteredModal.swift in Sources */,
 				D042B0211D1536D40095D480 /* BGSPMCoreData.swift in Sources */,
 				D042B03A1D16FC4D0095D480 /* Job+CoreDataProperties.swift in Sources */,
