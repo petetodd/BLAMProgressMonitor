@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class BLAMProgressMonitorVC: UIViewController {
 
     let notificationProgress = "com.brightbluecircle.circleViewProgress"
+    var selectedJob : Job!
     
     
     @IBOutlet weak var circleView: BGSUICircleView!
@@ -27,9 +29,6 @@ class BLAMProgressMonitorVC: UIViewController {
         // Do any additional setup after loading the view.
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(updateProgress), name: notificationProgress, object: nil)
-
-        
-        
         
         circleView.percentageComplete = NSNumber(float: 0.0) // Scale 0 - 1
         circleView.indicatorArcColor = UIColor.blueColor()
@@ -73,6 +72,9 @@ class BLAMProgressMonitorVC: UIViewController {
                 circleView.percentageComplete = percentComplete
                 circleView.setNeedsDisplay()
             }
+            if let stepDict = info["stepDict"]{
+                updateJobStep(stepDict as! Dictionary<String, AnyObject>)
+            }
         }
     }
     
@@ -88,9 +90,39 @@ class BLAMProgressMonitorVC: UIViewController {
         dict["jobStatus"] = "Started"
         dict["message"] = "Just started a test job"
         dict["percentageComplete"] = NSNumber(int: 0)
-        BGSPMCoreData.sharedInstance.createPMJob(dict)
+        selectedJob = BGSPMCoreData.sharedInstance.createPMJob(dict) as! Job
         BGSPMCoreData.sharedInstance.saveContext()
     }
+    
+    func updateJobStep(dictIn : Dictionary<String, AnyObject>) {
+        // Record job and status
+        var dict = [String: AnyObject] ()
+        if dictIn["message"] != nil{
+            dict["message"] = dictIn["message"] as! String
+        }else{
+            dict["message"] = "--"
+        }
+        if dictIn["status"] != nil{
+            dict["status"] = dictIn["status"] as! String
+        }else{
+            dict["status"] = "--"
+        }
+        if dictIn["stepDesc"] != nil{
+            dict["stepDesc"] = dictIn["stepDesc"] as! String
+        }else{
+            dict["stepDesc"] = "--"
+        }
+        if dictIn["stepID"] != nil{
+            dict["stepID"] = dictIn["stepID"] as! String
+        }else{
+            dict["stepID"] = "--"
+        }
+        let jobStep = BGSPMCoreData.sharedInstance.createPMJobStep(dict) as! JobStep
+        jobStep.job = selectedJob
+        BGSPMCoreData.sharedInstance.saveContext()
+
+    }
+
     
     func uniqueStringID()-> String{
         let strUnique = NSProcessInfo().globallyUniqueString

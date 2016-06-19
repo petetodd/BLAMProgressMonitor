@@ -120,6 +120,15 @@ class BGSPMCoreData {
         }
         return job
     }
+    
+    func createPMJobStep(dictIn : Dictionary<String, AnyObject>) -> NSManagedObject?{
+        let jobStep =  NSEntityDescription.insertNewObjectForEntityForName("JobStep", inManagedObjectContext: self.managedObjectContext)
+        
+        for (key, value) in dictIn{
+            jobStep.setValue(value, forKey: key)
+        }
+        return jobStep
+    }
 
 
     // MARK: - Core Data query support

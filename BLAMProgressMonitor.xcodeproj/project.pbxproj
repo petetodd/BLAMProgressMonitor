@@ -27,6 +27,10 @@
 		D042B02C1D153AF60095D480 /* BLAMProgressMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B02B1D153AF60095D480 /* BLAMProgressMonitorTests.swift */; };
 		D042B0341D153C220095D480 /* BLAMPMCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0331D153C220095D480 /* BLAMPMCoreDataTests.swift */; };
 		D042B0351D153E110095D480 /* BGSPMCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0201D1536D40095D480 /* BGSPMCoreData.swift */; };
+		D042B03A1D16FC4D0095D480 /* Job+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0361D16FC4D0095D480 /* Job+CoreDataProperties.swift */; };
+		D042B03B1D16FC4D0095D480 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0371D16FC4D0095D480 /* Job.swift */; };
+		D042B03C1D16FC4D0095D480 /* JobStep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0381D16FC4D0095D480 /* JobStep+CoreDataProperties.swift */; };
+		D042B03D1D16FC4D0095D480 /* JobStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B0391D16FC4D0095D480 /* JobStep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		D042B02B1D153AF60095D480 /* BLAMProgressMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLAMProgressMonitorTests.swift; sourceTree = "<group>"; };
 		D042B02D1D153AF60095D480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D042B0331D153C220095D480 /* BLAMPMCoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLAMPMCoreDataTests.swift; sourceTree = "<group>"; };
+		D042B0361D16FC4D0095D480 /* Job+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Job+CoreDataProperties.swift"; path = "CoreData/Job+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D042B0371D16FC4D0095D480 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Job.swift; path = CoreData/Job.swift; sourceTree = "<group>"; };
+		D042B0381D16FC4D0095D480 /* JobStep+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JobStep+CoreDataProperties.swift"; path = "CoreData/JobStep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D042B0391D16FC4D0095D480 /* JobStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobStep.swift; path = CoreData/JobStep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +186,10 @@
 			children = (
 				D042B0201D1536D40095D480 /* BGSPMCoreData.swift */,
 				D042B0221D15383D0095D480 /* BGSPMDataModel.xcdatamodeld */,
+				D042B0361D16FC4D0095D480 /* Job+CoreDataProperties.swift */,
+				D042B0371D16FC4D0095D480 /* Job.swift */,
+				D042B0381D16FC4D0095D480 /* JobStep+CoreDataProperties.swift */,
+				D042B0391D16FC4D0095D480 /* JobStep.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -297,16 +309,20 @@
 			files = (
 				D042AFF31D11C3620095D480 /* ViewController.swift in Sources */,
 				D042B00C1D11C41E0095D480 /* BLAMProgressMonitorVC.swift in Sources */,
+				D042B03C1D16FC4D0095D480 /* JobStep+CoreDataProperties.swift in Sources */,
 				D042AFF91D11C3620095D480 /* BLAMProgressMonitor.xcdatamodeld in Sources */,
 				D042B0071D11C3A00095D480 /* UIApplicationExtensions.swift in Sources */,
 				D042B01E1D1534730095D480 /* BGSPMTableViewDataSource.swift in Sources */,
+				D042B03B1D16FC4D0095D480 /* Job.swift in Sources */,
 				D042B0121D11C5410095D480 /* BGSTransitionCenteredAnimator.swift in Sources */,
 				D042B0191D147D5D0095D480 /* BGSPMTableView.swift in Sources */,
 				D042B0101D11C4B70095D480 /* BGSTransitionCenteredModal.swift in Sources */,
 				D042B0211D1536D40095D480 /* BGSPMCoreData.swift in Sources */,
+				D042B03A1D16FC4D0095D480 /* Job+CoreDataProperties.swift in Sources */,
 				D042AFF11D11C3620095D480 /* AppDelegate.swift in Sources */,
 				D042B0151D12AA020095D480 /* BGSUICircleView.swift in Sources */,
 				D042B0241D15383D0095D480 /* BGSPMDataModel.xcdatamodeld in Sources */,
+				D042B03D1D16FC4D0095D480 /* JobStep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,9 +29,13 @@
                         <constraint firstAttribute="width" constant="240" id="zcy-Fg-HkM"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLv-Rx-Odh">
-                    <rect key="frame" x="428" y="218" width="61" height="30"/>
-                    <state key="normal" title="Dismiss"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLv-Rx-Odh">
+                    <rect key="frame" x="376" y="204" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="5Gb-yo-VGC"/>
+                        <constraint firstAttribute="height" constant="44" id="ioS-0z-YfP"/>
+                    </constraints>
+                    <state key="normal" title="X"/>
                     <connections>
                         <action selector="butCancelAction:" destination="-1" eventType="touchUpInside" id="xhv-a3-Sbd"/>
                     </connections>
@@ -39,11 +43,13 @@
             </subviews>
             <color key="backgroundColor" red="0.99607843159999998" green="0.83137255909999996" blue="0.03529411927" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="DLv-Rx-Odh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="204" id="Cnb-GM-O4m"/>
                 <constraint firstItem="5bK-kx-A9V" firstAttribute="centerX" secondItem="tdL-f5-7ZI" secondAttribute="centerX" id="MNV-11-o9R"/>
                 <constraint firstItem="tdL-f5-7ZI" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="NGB-XN-iXU"/>
                 <constraint firstItem="5bK-kx-A9V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZNc-Om-Z2x"/>
                 <constraint firstItem="tdL-f5-7ZI" firstAttribute="top" secondItem="5bK-kx-A9V" secondAttribute="bottom" constant="8" id="ZvH-CE-vMG"/>
                 <constraint firstItem="5bK-kx-A9V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="jjk-a1-EPI"/>
+                <constraint firstItem="DLv-Rx-Odh" firstAttribute="leading" secondItem="5bK-kx-A9V" secondAttribute="trailing" constant="-44" id="k5p-z0-rD0"/>
                 <constraint firstItem="tdL-f5-7ZI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="yxE-3x-7YV"/>
             </constraints>
             <point key="canvasLocation" x="371" y="285"/>

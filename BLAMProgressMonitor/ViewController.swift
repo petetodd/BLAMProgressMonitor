@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         // Run demo calls to update Progress Momnitor on a new thread
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.startStep1()
+
             self.progressUIDemo()
         }
 
@@ -94,6 +96,40 @@ class ViewController: UIViewController {
         }
 
     }
+    
+    private func startStep1(){
+        var dataDict = Dictionary<String, AnyObject>()
+        dataDict["stepDict"] = stepDict("Started Test Step 1", status: "Started", stepDesc: "This is the first step", stepID: "0001")
+        dispatch_async(dispatch_get_main_queue()) {
+            NSNotificationCenter.defaultCenter().postNotificationName(self.notificationProgress, object:self , userInfo: dataDict)
+        }
+    }
+    
+    private func stepDict(message : String?, status : String?, stepDesc : String?, stepID : String?)-> Dictionary<String, AnyObject> {
+        var dict = [String: AnyObject] ()
+        if message != nil{
+            dict["message"] = message
+        }
+        
+        if status != nil{
+            dict["status"] = status
+        }
+        
+        if stepDesc != nil{
+            dict["stepDesc"] = stepDesc
+        }
+        
+        if stepID != nil{
+            dict["stepID"] = stepID
+        }
+        return dict
+    }
+    
+
+    
+    
+    
+    
 
 }
 
