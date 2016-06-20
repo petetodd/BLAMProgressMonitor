@@ -94,12 +94,8 @@ class ViewController: UIViewController {
         // Start Connect
         let connectDemoTime = 3.00
         NSTimer.scheduledTimerWithTimeInterval(connectDemoTime, target:self, selector: #selector(connectComplete), userInfo: nil, repeats: false)
-
-    //    startConnect()
         
-    }
-    
-
+          }
     
     func connectComplete() {
         var dataDict = Dictionary<String, AnyObject>()
@@ -110,8 +106,32 @@ class ViewController: UIViewController {
         dispatch_async(dispatch_get_main_queue()) {
             NSNotificationCenter.defaultCenter().postNotificationName(self.notificationProgress, object:self , userInfo: dataDict)
         }
+        
+        var dataDict2 = Dictionary<String, AnyObject>()
+        dataDict2["stepDict"] = stepDict("DEMO User Profile", status: "Started", stepDesc: "This is the second step", stepID: "0002")
+        dispatch_async(dispatch_get_main_queue()) {
+            NSNotificationCenter.defaultCenter().postNotificationName(self.notificationProgress, object:self , userInfo: dataDict2)
+        }
+        // Start User Profile upload DEMO
+        let connectDemoTime = 3.00
+        NSTimer.scheduledTimerWithTimeInterval(connectDemoTime, target:self, selector: #selector(userUploadComplete), userInfo: nil, repeats: false)
+
 
     }
+    
+    func userUploadComplete() {
+        var dataDict = Dictionary<String, AnyObject>()
+        dataDict["stepDict"] = self.stepDict("DEMO User Profile", status: "Success", stepDesc: "This is the second step", stepID: "0002")
+        let floatPercent : Double = 15.00 / 100
+        dataDict["percent"] = NSNumber(double: floatPercent)
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            NSNotificationCenter.defaultCenter().postNotificationName(self.notificationProgress, object:self , userInfo: dataDict)
+        }
+        
+
+    }
+
 
 
     
