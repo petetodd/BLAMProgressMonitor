@@ -11,11 +11,15 @@ import UIKit
 class ViewController: UIViewController {
     
     let notificationProgress = "com.brightbluecircle.circleViewProgress"
+    
+    var timer = NSTimer()
+    var secondsLeft = 10.00
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,29 +29,40 @@ class ViewController: UIViewController {
 
     @IBAction func displayButAction(sender: AnyObject) {
         
-        displaySync()
+        displayPM("DEMO")
+        self.startDemoJob()
+
+
+        
+/*
         // Run demo calls to update Progress Momnitor on a new thread
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            self.startStep1()
+            self.startDemoJob()
+        //    self.startStep1()
 
-            self.progressUIDemo()
+        //    self.progressUIDemo()
         }
 
         // Run a test to show update of progress
         //displaySyncDemo()
+ */
 
     }
-    
-    private func displaySync(){
+
+    private func displayPM(jobTitle : String?){
         if let topVC = UIApplication.topViewController(){
             let displayVC = BLAMProgressMonitorVC()
+            if jobTitle != nil{
+                displayVC.jobLabel = jobTitle
+            }
             let transitionManager = BGSTransitionCenteredModal()
             displayVC.transitioningDelegate = transitionManager
             topVC.presentViewController(displayVC, animated: true, completion: nil)
            
         }
     }
+      /*
     
     private func displaySyncDemo(){
         if let topVC = UIApplication.topViewController(){
@@ -60,9 +75,43 @@ class ViewController: UIViewController {
             
         }
     }
+ */
     
+    // MARK: - DEMO
+    // A 4 step :
+    // Connect to Server
+    // If a User image present return a blob key from data store
+    // Upload a user record to create user on server
+    // Process callback from server to update the local user record with server keys
+    // (Async) upload the user image
     
+    func startDemoJob(){
+        var dataDict = Dictionary<String, AnyObject>()
+        dataDict["stepDict"] = stepDict("DEMO Connect", status: "Started", stepDesc: "This is the first step", stepID: "0001")
+        dispatch_async(dispatch_get_main_queue()) {
+            NSNotificationCenter.defaultCenter().postNotificationName(self.notificationProgress, object:self , userInfo: dataDict)
+        }
+        // Start Connect
+        let connectDemoTime = 3.00
+        NSTimer.scheduledTimerWithTimeInterval(connectDemoTime, target:self, selector: #selector(connectComplete), userInfo: nil, repeats: false)
+
+    //    startConnect()
+        
+    }
     
+
+    
+    func connectComplete() {
+        var dataDict = Dictionary<String, AnyObject>()
+        dataDict["stepDict"] = self.stepDict("DEMO Connect", status: "Success", stepDesc: "This is the first step", stepID: "0001")
+        let floatPercent : Double = 5.00 / 100
+        dataDict["percent"] = NSNumber(double: floatPercent)
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            NSNotificationCenter.defaultCenter().postNotificationName(self.notificationProgress, object:self , userInfo: dataDict)
+        }
+
+    }
 
 
     

@@ -13,6 +13,7 @@ class BLAMProgressMonitorVC: UIViewController {
 
     let notificationProgress = "com.brightbluecircle.circleViewProgress"
     var selectedJob : Job!
+    var jobLabel : String!
     
     
     @IBOutlet weak var circleView: BGSUICircleView!
@@ -38,8 +39,12 @@ class BLAMProgressMonitorVC: UIViewController {
         circleView.fillColor = UIColor.lightGrayColor()
         circleView.lineWidth = 5
         circleView.fillAlpha = 0.3
+        if jobLabel != nil{
+            circleView.lblText = jobLabel
+        }else{
+            circleView.lblText = ""
+        }
         circleView.showPercentage = true
-        circleView.lblText = "Migration"
         circleView.showPercentage = true
         
         circleView.contentMode = UIViewContentMode.Redraw
@@ -95,6 +100,12 @@ class BLAMProgressMonitorVC: UIViewController {
     // Used to log job enable reporting on progress of previous jobs
     func createJob(){
         var dict = [String: AnyObject] ()
+        if jobLabel != nil{
+            dict["jobDesc"] = jobLabel
+        }else{
+            dict["jobDesc"] = "PM job"
+        }
+        
         dict["jobDesc"] = "Test job"
         dict["jobID"] = uniqueStringID()
         dict["jobStatus"] = "Started"
@@ -169,8 +180,12 @@ class BLAMProgressMonitorVC: UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         let cell = UITableViewCell()
-        let jobStep = selectedJob.steps?.allObjects[indexPath.row] as! JobStep
-        cell.textLabel?.text = jobStep.message
+        let sortDate = NSSortDescriptor.init(key: "timeStarted", ascending: false)
+        let sortedSteps =   selectedJob.steps?.sortedArrayUsingDescriptors([sortDate])
+        let jobStep = sortedSteps![indexPath.row] as! JobStep
+        cell.textLabel?.text = jobStep.displayTitle()
+        cell.backgroundColor = UIColor.clearColor()
+
         
         
         

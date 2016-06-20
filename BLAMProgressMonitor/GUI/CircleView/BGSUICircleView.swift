@@ -188,7 +188,8 @@ class BGSUICircleView: UIView {
 //        var attributes = [NSParagraphStyleAttributeName:paragraphStyle]
   
         let percentage = percentageComplete.floatValue * 100
-        let strPercent = String(format: "%.2f",percentage)
+        let strPercentNbr = String(format: "%.2f",percentage)
+        let strPercent = String("\(strPercentNbr)%")
 
         let size: CGSize = NSString(string: strPercent).sizeWithAttributes(multipleAttributes)
         let r = CGRectMake(rect.origin.x, rect.origin.y + (rect.size.height - size.height)/2.0,
